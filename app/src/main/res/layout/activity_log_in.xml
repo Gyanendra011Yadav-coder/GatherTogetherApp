@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="30dp"
+
     tools:context=".LogInActivity">
 
     <!--This, will be adding Text View at The LogIn Page.-->
@@ -16,11 +17,20 @@
         android:paddingTop="20dp"
         android:text="Welcome Back"
         android:textColor="#000000"
-        android:textSize="34sp" />
+        android:textSize="34sp"
+        />
+
+    <!--This,will be Used For Inputing the User's Email Address or Phone Number.-->
+    <!--At,The Down Side we Have Used the drawable file that we have created -->
     <EditText
+        android:id="@+id/emailBox"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:inputType="textEmailAddress"
+        android:hint="Phone Or Email Address"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/textbox_style"
         />
+
 
 </LinearLayout>

@@ -5,5 +5,5 @@
     <!--Setting Down the Padding od it.-->
     <padding android:left="10dp" android:top="10dp" android:bottom="10dp" android:right="10dp" />
     <!--This,will be Setting down the Corners to Round.-->
-    <corners android:radius="10dp"/>
+    <corners android:radius="20dp"/>
 </shape>
