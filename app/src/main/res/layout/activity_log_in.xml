@@ -64,7 +64,7 @@
     <!--This, Button Will Be USed For Logging In.-->
     <Button
         android:id="@+id/logInBtn"
-        android:layout_width="200dp"
+        android:layout_width="250dp"
         android:layout_height="70dp"
         android:layout_gravity="center"
         android:layout_marginTop="40dp"
@@ -73,6 +73,42 @@
         android:textAllCaps="false"
         android:textColor="#fff"
         android:textSize="17dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="319dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="92dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/logInButton"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="@+id/logInButton"
+        app:layout_constraintTop_toBottomOf="@+id/logInButton"
+        app:layout_constraintVertical_bias="0.13"
+        tools:ignore="ExtraText">
+        android:textAlign="center"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="80dp"
+            android:text="Don't Have An Account? "
+            android:textColor="@color/design_default_color_on_secondary"
+            tools:ignore="HardcodedText" />
+
+
+        <TextView
+            android:id="@+id/signUpTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="    SignUp"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="normal|bold"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
 
 
 
