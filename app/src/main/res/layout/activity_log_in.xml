@@ -74,6 +74,7 @@
         android:textColor="#fff"
         android:textSize="17dp" />
 
+    <!--This Linear Layout is for Adding the Sign Up-->
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="319dp"
@@ -109,8 +110,6 @@
             android:textStyle="normal|bold"
             tools:ignore="HardcodedText" />
     </LinearLayout>
-
-
 
 
 </LinearLayout>
