@@ -32,5 +32,16 @@
         android:background="@drawable/textbox_style"
         />
 
+<!--Creating This Edit Text, for Password  -->
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:inputType="textEmailAddress"
+        android:hint="Password"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/textbox_style"
+        />
+
 
 </LinearLayout>
