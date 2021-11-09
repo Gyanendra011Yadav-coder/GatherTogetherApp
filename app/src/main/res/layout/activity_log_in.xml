@@ -43,16 +43,18 @@
         android:background="@drawable/textbox_style"
         />
 
+    <!--This, Button Will Be USed For Logging In.-->
     <Button
         android:id="@+id/logInButton"
-        android:layout_width="150dp"
+        android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
-        android:layout_marginRight="50dp"
         android:text="LogIn"
+        android:textSize="17dp"
         android:textAllCaps="false"
         android:textColor="#fff"
-
+        android:gravity="center"
+        android:backgroundTint="@color/black"
         />
 
 
