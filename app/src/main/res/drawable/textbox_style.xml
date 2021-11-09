@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
     <!--Creating the Stoke And Providing The Width and Color Of it.-->
-<stroke android:width="1dp" android:color="#9C9C9C"/>
+<stroke android:width="1dp" android:color="@color/black"/>
     <!--Setting Down the Padding od it.-->
     <padding android:left="10dp" android:top="10dp" android:bottom="10dp" android:right="10dp" />
     <!--This,will be Setting down the Corners to Round.-->

@@ -6,19 +6,19 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="30dp"
-
+    android:background="@drawable/gathertogetherloginbacground"
     tools:context=".LogInActivity">
 
     <!--This, will be adding Text View at The LogIn Page.-->
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="match_parent"
+        android:layout_width="348dp"
         android:layout_height="wrap_content"
-        android:paddingTop="20dp"
-        android:text="Welcome Back"
+        android:paddingTop="100dp"
+        android:text="LogIn"
         android:textColor="#000000"
-        android:textSize="34sp"
-        />
+        android:gravity="center"
+        android:textSize="60sp" />
 
     <!--This,will be Used For Inputing the User's Email Address or Phone Number.-->
     <!--At,The Down Side we Have Used the drawable file that we have created -->
@@ -28,7 +28,7 @@
         android:layout_height="50dp"
         android:inputType="textEmailAddress"
         android:hint="Phone Or Email Address"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/textbox_style"
         />
 
@@ -36,26 +36,36 @@
     <EditText
         android:id="@+id/password"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:inputType="textEmailAddress"
         android:hint="Password"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="15dp"
         android:background="@drawable/textbox_style"
         />
 
     <!--This, Button Will Be USed For Logging In.-->
     <Button
-        android:id="@+id/logInButton"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="20dp"
+        android:id="@+id/logInBtn"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/black"
         android:text="LogIn"
-        android:textSize="17dp"
+        android:layout_gravity="center"
         android:textAllCaps="false"
         android:textColor="#fff"
-        android:gravity="center"
+        android:textSize="17dp" />
+
+    <Button
+        android:id="@+id/forgetPasswordBtn"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp"
         android:backgroundTint="@color/black"
-        />
+        android:text="SignUp  "
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="17dp" />
 
 
 </LinearLayout>
