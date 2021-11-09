@@ -43,29 +43,38 @@
         android:background="@drawable/textbox_style"
         />
 
+   <!--This,will will be helping the user when the user will forget the Password-->
+    <TextView
+        android:id="@+id/forgotPasswordButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password?"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="normal|bold"
+        android:paddingLeft="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/inputEmail"
+        app:layout_constraintHorizontal_bias="0.98"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputEmail"
+        app:layout_constraintVertical_bias="0.01999998"
+        tools:ignore="HardcodedText" />
+
     <!--This, Button Will Be USed For Logging In.-->
     <Button
         android:id="@+id/logInBtn"
-        android:layout_width="120dp"
-        android:layout_height="60dp"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
         android:layout_marginTop="40dp"
         android:backgroundTint="@color/black"
         android:text="LogIn"
-        android:layout_gravity="center"
         android:textAllCaps="false"
         android:textColor="#fff"
         android:textSize="17dp" />
 
-    <Button
-        android:id="@+id/forgetPasswordBtn"
-        android:layout_width="120dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="50dp"
-        android:backgroundTint="@color/black"
-        android:text="SignUp  "
-        android:textAllCaps="false"
-        android:textColor="#fff"
-        android:textSize="17dp" />
+
 
 
 </LinearLayout>
