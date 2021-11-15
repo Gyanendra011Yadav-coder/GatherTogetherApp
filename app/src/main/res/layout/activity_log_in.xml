@@ -127,6 +127,4 @@
             android:textStyle="normal|bold"
             tools:ignore="HardcodedText" />
     </LinearLayout>
-
-
 </LinearLayout>
