@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "773306053441",
+    "project_id": "gathertogether-3ec5f",
+    "storage_bucket": "gathertogether-3ec5f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:773306053441:android:6502e1c874fb4a814367c0",
+        "android_client_info": {
+          "package_name": "com.example.gathertogetherapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "773306053441-4fj9lvdbjtor1hdb62ftj81ce6elhpff.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEIU_ZtsIoUNA_1r6O_EUVCfdpsCGk1iE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "773306053441-4fj9lvdbjtor1hdb62ftj81ce6elhpff.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
