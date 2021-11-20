@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -21,9 +22,6 @@ public class SignUpActivity extends AppCompatActivity {
 
     EditText userNameBox,emailBox,passwordBox,alreadyHaveAccount;
     Button signup;
-
-
-
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -61,6 +59,13 @@ public class SignUpActivity extends AppCompatActivity {
                         }
                     }
                 });
+            }
+        });
+        //Setting The Procedure Of Opening The SignUp Activity After Pressing
+        alreadyHaveAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(SignUpActivity.this,LogInActivity.class));
             }
         });
     }
