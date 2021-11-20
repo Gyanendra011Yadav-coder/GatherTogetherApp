@@ -30,6 +30,7 @@ public class SignUpActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+
         //Assigning the Value to the Firebase Created Variable.
         auth = FirebaseAuth.getInstance();
 
@@ -62,6 +63,5 @@ public class SignUpActivity extends AppCompatActivity {
                 });
             }
         });
-
     }
     }
