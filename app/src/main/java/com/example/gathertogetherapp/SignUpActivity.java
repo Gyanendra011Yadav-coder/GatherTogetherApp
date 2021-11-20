@@ -49,7 +49,7 @@ public class SignUpActivity extends AppCompatActivity {
                 pass = passwordBox.getText().toString();
 
 
-
+            //Passing the User Credentials To The FireBase to Created The User's Account
                 auth.createUserWithEmailAndPassword(email,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -59,7 +59,7 @@ public class SignUpActivity extends AppCompatActivity {
                             Toast.makeText(SignUpActivity.this, (CharSequence) task.getException().getLocalizedMessage(), Toast.LENGTH_SHORT).show();
                         }
                     }
-                })
+                });
             }
         });
 
