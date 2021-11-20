@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -48,10 +49,15 @@ public class SignUpActivity extends AppCompatActivity {
                 pass = passwordBox.getText().toString();
 
 
+
                 auth.createUserWithEmailAndPassword(email,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-
+                        if (task.isSuccessful()){
+                            Toast.makeText(SignUpActivity.this, "Account Created Successfully...", Toast.LENGTH_SHORT).show();
+                        }else{
+                            Toast.makeText(SignUpActivity.this, (CharSequence) task.getException().getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                        }
                     }
                 })
             }
