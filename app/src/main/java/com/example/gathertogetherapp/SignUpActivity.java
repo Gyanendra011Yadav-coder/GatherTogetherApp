@@ -8,9 +8,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class SignUpActivity extends AppCompatActivity {
+    //Creating The Object Of FireBase
+    FirebaseAuth auth;
+
     EditText userNameBox,emailBox,passwordBox,alreadyHaveAccount;
     Button signup;
+
+
 
 
     @SuppressLint("WrongViewCast")
@@ -18,6 +25,8 @@ public class SignUpActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+        //Assigning the Value to the Firebase Created Variable.
+        auth=FirebaseAuth.getInstance();
 
         //Assigning The Value To the Objects That are Created Above
         userNameBox =findViewById(R.id.inputUserName);
@@ -33,8 +42,6 @@ public class SignUpActivity extends AppCompatActivity {
                 name = userNameBox.getText().toString();
                 email=emailBox.getText().toString();
                 pass=passwordBox.getText().toString();
-
-
             }
         });
 
