@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -22,6 +23,9 @@ public class LogInActivity extends AppCompatActivity {
 //Creating the Object Of Text-View and Button
     EditText emailBox, passwordBox,signUp; // here SignUp is not used as an Button but it is used as TextView
     Button loginBtn;
+//Adding The Dialogue Box
+    ProgressDialog progressDialog;
+
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -29,6 +33,12 @@ public class LogInActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
         auth=FirebaseAuth.getInstance();
+
+        //Progress Bar
+        progressDialog=new ProgressDialog(LogInActivity.this);
+        progressDialog.setTitle("Creating Account...");
+        progressDialog.setMessage("Do Not Move Back, We Are Creating Your Account...");
+
         //Assigning The Value To the Objects That are Created Above
         emailBox=findViewById(R.id.emailBox);
         passwordBox =findViewById(R.id.password);
@@ -48,11 +58,16 @@ public class LogInActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String email, password;
+                //Showing The Dialogue Box
+                progressDialog.show();
+
                 email=emailBox.getText().toString();
                 password=passwordBox.getText().toString();
                 auth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
+                        //Ending The Dialogue Box
+                        progressDialog.dismiss();
                         if (task.isSuccessful()){
                             Toast.makeText(LogInActivity.this, "Logged In Succesfull...", Toast.LENGTH_SHORT).show();
                         }else{
