@@ -3,6 +3,10 @@ package com.example.gathertogetherapp;
 public class User {
     private String name,email,pass;
 
+    public User(){
+
+    }
+
     public String getName() {
         return name;
     }

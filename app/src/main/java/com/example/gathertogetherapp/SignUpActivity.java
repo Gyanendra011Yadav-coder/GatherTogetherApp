@@ -14,6 +14,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -65,8 +66,13 @@ public class SignUpActivity extends AppCompatActivity {
                 email = emailBox.getText().toString();
                 pass = passwordBox.getText().toString();
 
+                //Creating The User Class Variables
+                User user= new User();
+                user.setEmail(email);
+                user.setPass(pass);
+                user.setName(name);
 
-            //Passing the User Credentials To The FireBase to Created The User's Account
+                //Passing the User Credentials To The FireBase to Created The User's Account
                 auth.createUserWithEmailAndPassword(email,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -74,6 +80,14 @@ public class SignUpActivity extends AppCompatActivity {
                         progressDialog.dismiss();
 
                         if (task.isSuccessful()){
+                            //Adding the User's Detail To The Fire Database Using User's Class
+                            database.collection("Users").document().set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void unused) {
+
+                                    startActivity(new Intent(SignUpActivity.this,LogInActivity.class));
+                                }
+                            });
                             Toast.makeText(SignUpActivity.this, "Account Created Successfully...", Toast.LENGTH_SHORT).show();
                         }else{
                             Toast.makeText(SignUpActivity.this, (CharSequence) task.getException().getLocalizedMessage(), Toast.LENGTH_SHORT).show();
