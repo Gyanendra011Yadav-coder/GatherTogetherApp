@@ -4,11 +4,13 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -23,6 +25,9 @@ public class SignUpActivity extends AppCompatActivity {
     EditText userNameBox,emailBox,passwordBox,alreadyHaveAccount;
     Button signup;
 
+    //Adding Progress Bar
+    ProgressDialog progressDialog;
+
     @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +36,11 @@ public class SignUpActivity extends AppCompatActivity {
 
         //Assigning the Value to the Firebase Created Variable.
         auth = FirebaseAuth.getInstance();
+
+        //Progress Bar
+        progressDialog=new ProgressDialog(SignUpActivity.this);
+        progressDialog.setTitle("Creating Account...");
+        progressDialog.setMessage("Do Not Move Back, We Are Creating Your Account...");
 
         //Assigning The Value To the Objects That are Created Above
         userNameBox = findViewById(R.id.inputUserName);
@@ -42,6 +52,7 @@ public class SignUpActivity extends AppCompatActivity {
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                progressDialog.show();        //It is to show the Dialogue Box
                 String name, email, pass;
                 name = userNameBox.getText().toString();
                 email = emailBox.getText().toString();

@@ -35,7 +35,7 @@ public class LogInActivity extends AppCompatActivity {
         loginBtn=findViewById(R.id.loginBtn);
         signUp=findViewById(R.id.signUp);
 
-        //Setting The Procedure Of Opening The SignUp Activity After Pressing
+        //Setting The Procedure Of Opening The SignUp Activity After Pressing SignUp Button
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
