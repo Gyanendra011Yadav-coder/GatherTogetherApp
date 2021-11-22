@@ -17,6 +17,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class SignUpActivity extends AppCompatActivity {
     //Creating The Object Of FireBase
@@ -24,6 +25,9 @@ public class SignUpActivity extends AppCompatActivity {
 
     EditText userNameBox,emailBox,passwordBox,alreadyHaveAccount;
     Button signup;
+
+    //Adding The Fire DataBase To The Project
+    FirebaseFirestore database;
 
     //Adding Progress Bar
     ProgressDialog progressDialog;
@@ -33,6 +37,9 @@ public class SignUpActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+
+        //Assigning The FireData Object A Value.
+        database=FirebaseFirestore.getInstance();
 
         //Assigning the Value to the Firebase Created Variable.
         auth = FirebaseAuth.getInstance();
