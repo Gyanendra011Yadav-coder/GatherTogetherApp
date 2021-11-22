@@ -63,6 +63,9 @@ public class SignUpActivity extends AppCompatActivity {
                 auth.createUserWithEmailAndPassword(email,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
+    // Ending the Dialogue Box
+                        progressDialog.dismiss();
+
                         if (task.isSuccessful()){
                             Toast.makeText(SignUpActivity.this, "Account Created Successfully...", Toast.LENGTH_SHORT).show();
                         }else{
