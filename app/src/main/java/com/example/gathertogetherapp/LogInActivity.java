@@ -69,7 +69,7 @@ public class LogInActivity extends AppCompatActivity {
                         //Ending The Dialogue Box
                         progressDialog.dismiss();
                         if (task.isSuccessful()){
-                            Toast.makeText(LogInActivity.this, "Logged In Succesfull...", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(LogInActivity.this,DashBoardActivity.class));
                         }else{
                             Toast.makeText(LogInActivity.this, task.getException().getLocalizedMessage(), Toast.LENGTH_SHORT).show();
                         }
